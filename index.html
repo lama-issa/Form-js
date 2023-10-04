@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles.css">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!--sweet alert css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.8/sweetalert2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.8/sweetalert2.min.css">
+</head>
+
+<body>
+    <div class=" m-auto my-5 contaner">
+       
+        <form id="signupForm"  >
+            <div class="t">
+                <h3 class="mb-3">Sign Up</h3>
+
+            <div class="box w-100">
+                <div class="mt-3 w-50">
+                    <label for="username" class="d-flex">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+                    <div id="errorUsername" class="mt-3 me-5">Invalid username must be at least 3 characters and accept only letters, numbers, '-', '_', and '@'<br><br></div>
+        
+                </div>
+                
+
+                <div class="mt-4 w-50">
+                    <label for="fullName" class="d-flex">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required><br>
+                    <div id="errorfullName" class="mt-3">Invalid full name must be 3 to 15 characters long and contain only letters<br><br></div>   
+                </div>
+
+    
+            </div>
+          
+
+            <div class="box w-100">
+                <div class="mt-4 w-50">
+                    <label for="mobileNumber" class="d-flex">Mobile Number:</label>
+                    <input type="tel" id="mobileNumber" name="mobileNumber" required><br>
+                    <div id="errormobileNumber" class="mt-3 me-5">Invalid mobile number must start with 05 and be 10 digits long<br><br></div>
+        
+                </div>
+
+                <div class="mt-4 w-50">
+                    <label for="age" class="d-flex">Age:</label>
+                    <input type="number" id="age" name="age"><br>
+                    <div id="errorAge" class="mt-3">Invalid age must be between 18 and 100<br><br></div>
+        
+                </div>
+
+            </div>
+
+            <div class="box ">
+                <div class="mt-4 ">
+                    <label for="email" class="d-flex">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <div id="errorEmail" class="mt-3 me-5">Invalid email address<br><br></div>
+                </div>
+
+                <div class="mt-4 option ">
+                    <label for="country" class="d-flex ">Country:</label>
+                    <select id="country" name="country"  class="w-100 h-50" required>
+                        <option value=""></option>
+                        <option value="p">palestine</option>
+                        <option value="j">Jordan</option>
+                        <option value="f">France</option>
+                        <option value="c">China</option>
+                        <option value="e">Egypt</option>
+
+                    </select><br>
+                    <div id="errorcountry" class="mt-3">Please select a country<br><br></div>
+                </div>
+            </div>
+
+
+            <div class="box w-100">
+                <div class="mt-4 w-50" >
+                    <label for="password" class="d-flex">Password:</label>
+                    <input type="password" id="password" name="password" required><br>
+                    <div id="errorpassword" class="mt-3 me-5">Invalid password must be 6 to 24 characters and contain letters, numbers, and at least one special character<br><br></div>
+                </div>
+
+                <div class="mt-4 w-50">
+                    <label for="confirmPassword" class="d-flex">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+                    <div id="errorconfirmPassword" class="mt-3">Password and confirmation do not match<br><br></div>
+                </div>
+            </div>
+           
+
+            <div class="buttons d-flex flex-row-reverse mt-5">
+                <button type="submit" class="btn btn-success">Save</button>
+                <button type="button" class="btn btn-light me-2" onclick="clearForm()">Clear</button>
+             
+            </div>
+            <div id="error-message"></div>
+            </div>
+        </form>
+    
+       
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
